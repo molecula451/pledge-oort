@@ -38,7 +38,7 @@ contract MainnetPledge {
         owner.call{value: availableTokens};
     }
 
-    function calculateAvailableTokens() private view returns (uint256) {
+    function calculateAvailableTokens() public view returns (uint256) {
         uint256 amount;
         if (withdrawTimes <= 5) {
             amount = 100_000_000 * 10**18;
